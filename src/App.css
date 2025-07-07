@@ -1,3 +1,26 @@
+@font-face {
+  font-family: "AvenirBook";
+  src: url("./fonts/avenir/Avenir-Book.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratM";
+  src: url("./fonts/montserrat/Montserrat-Medium.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratR";
+  src: url("./fonts/montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   padding: 40px;
   font-family: "Montserrat", sans-serif;
@@ -5,11 +28,21 @@
 }
 
 .product-list-title {
+  font-family: AvenirBook;
   text-align: center;
-  font-size: 2rem;
+  font-size: 45px;
   margin-bottom: 30px;
 }
 
+.product-title {
+  font-family: MontserratM;
+  font-size: 15px;
+}
+
+.product-price {
+  font-family: MontserratR;
+  font-size: 15px;
+}
 .product-card {
   background: #fafafa;
   border-radius: 20px;
@@ -45,7 +78,8 @@
 }
 
 .color-label {
-  font-size: 0.9rem;
+  font-family: AvenirBook;
+  font-size: 12px;
   color: #888;
   margin-bottom: 8px;
 }
@@ -56,6 +90,8 @@
 }
 
 .score {
+  font-family: AvenirBook;
+  font-size: 14px;
   margin-left: 8px;
   color: #444;
   font-weight: 500;

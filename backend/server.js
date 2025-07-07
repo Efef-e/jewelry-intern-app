@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const axios = require("axios");
 const products = require("./products.json");
 const app = express();
 const PORT = 5000;
@@ -8,13 +7,8 @@ const PORT = 5000;
 app.use(cors());
 
 async function getGoldPrice() {
-  const apiKey = "goldapi-API-ANAHTARIN";
-  const url = "https://www.goldapi.io/api/XAU/USD";
-  const { data } = await axios.get(url, {
-    headers: { "x-access-token": apiKey },
-  });
-
-  return data.price / 31.1035;
+  return 70;
+  cd;
 }
 
 app.get("/api/products", async (req, res) => {

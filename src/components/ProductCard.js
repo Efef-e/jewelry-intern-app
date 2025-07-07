@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ProductCard.css";
 
 const colorOptions = [
   { key: "yellow", label: "Yellow Gold", color: "#E6CA97" },

@@ -15,11 +15,12 @@ function ProductCard({ product }) {
 
   return (
     <div className="product-card">
-      <img
-        src={product.images[selectedColor]}
-        alt={product.name}
-        className="product-img"
-      />
+      <div className="product-img">
+        <img
+          src={product.images[selectedColor]}
+          alt={product.name}
+        />
+      </div>
       <div className="product-info">
         <div className="product-title">{product.name}</div>
         <div className="product-price">

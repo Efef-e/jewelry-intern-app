@@ -1,38 +1,62 @@
 .App {
+  padding: 40px;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+}
+
+.product-list-title {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-card {
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.color-picker {
+  margin: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.color-dot {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-dot.selected {
+  border: 3px solid #222;
+}
+
+.color-label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #f5c518;
+  font-size: 1.1rem;
+}
+
+.score {
+  margin-left: 8px;
+  color: #444;
+  font-weight: 500;
 }

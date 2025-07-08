@@ -2,7 +2,7 @@
   "name": "jewelry-intern-app",
   "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://jewelry-intern-app-production-96e4.up.railway.app",
   "scripts": {
     "start": "react-scripts start ",
     "build": "react-scripts build",

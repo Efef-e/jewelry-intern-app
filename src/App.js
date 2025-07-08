@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("/api/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);

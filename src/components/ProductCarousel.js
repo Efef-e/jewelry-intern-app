@@ -1,29 +1,20 @@
 import React from "react";
-import Slider from "react-slick";
 import ProductCard from "./ProductCard";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./ProductCarousel.css";
 
 function ProductCarousel({ products }) {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
-    ],
-  };
+  const repeatedProducts = [
+    ...products,
+    ...products,
+    ...products,
+  ];
 
   return (
-    <Slider {...settings}>
-      {products.map((p, i) => (
-        <ProductCard key={i} product={p} />
+    <div className="product-scroll-container">
+      {repeatedProducts.map((product, index) => (
+        <ProductCard key={index} product={product} />
       ))}
-    </Slider>
+    </div>
   );
 }
 

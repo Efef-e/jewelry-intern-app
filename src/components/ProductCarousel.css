@@ -1,0 +1,26 @@
+.product-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

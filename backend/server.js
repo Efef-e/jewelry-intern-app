@@ -2,13 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const products = require("./products.json");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
 async function getGoldPrice() {
   return 70;
-  cd;
 }
 
 app.get("/api/products", async (req, res) => {
@@ -31,5 +30,5 @@ app.get("/api/products", async (req, res) => {
 });
 
 app.listen(PORT, () =>
-  console.log(`Backend http://localhost:${PORT} working.`)
+  console.log(`Backend running on http://localhost:${PORT}`)
 );

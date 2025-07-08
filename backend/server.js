@@ -4,13 +4,27 @@ const path = require("path");
 const products = require("./products.json");
 const app = express();
 const PORT = process.env.PORT || 10000;
+const axios = require("axios");
 
 app.use(cors());
 
 app.use(express.static(path.join(__dirname, "../build")));
 
 async function getGoldPrice() {
-  return 70;
+  try {
+    const apiKey = "YOUR_METALS_API_KEY";
+    const url = `https://metals-api.com/api/latest?access_key=${apiKey}&base=USD&symbols=XAU`;
+    const response = await axios.get(url);
+    const pricePerOunce = response.data.rates.XAU;
+    const pricePerGram = pricePerOunce / 31.1035;
+    return pricePerGram;
+  } catch (error) {
+    console.error(
+      "Could not get gold price:",
+      error.message
+    );
+    return 70;
+  }
 }
 
 app.get("/api/products", async (req, res) => {

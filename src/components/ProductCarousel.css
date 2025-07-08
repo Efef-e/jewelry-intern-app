@@ -66,13 +66,13 @@
 
 .scroll-left::before {
   content: "‹";
-  font-size: 24px;
+  font-size: 40px;
   color: #333;
 }
 
 .scroll-right::before {
   content: "›";
-  font-size: 24px;
+  font-size: 40px;
   color: #333;
 }
 

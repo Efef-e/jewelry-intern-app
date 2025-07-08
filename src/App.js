@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "https://jewelry-intern-app-production-146f.up.railway.app/api/products"
+        "https://jewelry-intern-app-production-4072.up.railway.app/api/products"
       )
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));

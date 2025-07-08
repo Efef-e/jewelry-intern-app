@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const products = require("./products.json");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, "../build")));
 
 async function getGoldPrice() {
   return 70;
@@ -27,6 +30,12 @@ app.get("/api/products", async (req, res) => {
       error: "Could not get gold price or products.",
     });
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../build", "index.html")
+  );
 });
 
 app.listen(PORT, () =>
